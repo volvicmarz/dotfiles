@@ -1,0 +1,478 @@
+/* Global Styling */
+* {
+        font-family: "Monocraft";
+        font-weight: normal;
+        /*font-size: 13.9px;*/
+        font-size: 14px;
+        min-height: 12px;
+}
+
+@import "theme.css";
+
+window#waybar {
+        background: @main-bg;
+}
+
+#custom-updates {
+        color: @module-fg;
+        background: @module;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-left: 5px;
+        margin-right: 2px;
+        padding-left: 2px;
+        padding-right: 0px;
+}
+
+#workspaces button.empty {
+        color: @surface0;
+        background-color: @main-bg;
+        border-radius: 0px;
+        margin-top: -2px;
+        margin-bottom: -0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 4px;
+        padding-right: 4px;
+        /*animation: ws_normal 20s ease-in-out 1;*/
+        animation: none;
+}
+
+#workspaces button {
+        color: @text;
+        background-color: @main-bg;
+        border-radius: 0px;
+        margin-top: -2px;
+        margin-bottom: -0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 4px;
+        padding-right: 4px;
+        /*animation: ws_normal 20s ease-in-out 1;*/
+        animation: none;
+}
+
+#workspaces button.active {
+        color: @red;
+        background: @main-bg;
+        animation: ws_active 20s ease-in-out 1;
+        transition: all 0.2s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+#workspaces button.focused {
+        color: @red;
+        background: @main-bg;
+        animation: ws_active 20s ease-in-out 1;
+        transition: all 0.2s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+
+#workspaces button:hover {
+        color: @module-fg;
+        background: @main-bg;
+        /*animation: ws_hover 20s ease-in-out 1;*/
+        /*transition: all 0.2s cubic-bezier(0.55, -0.68, 0.48, 1.682);*/
+        animation: none;
+        transition: none;
+}
+
+#language {
+        margin-left: 0px;
+}
+
+#submap {
+        margin-left: 8px;
+        margin-right: 8px;
+}
+
+#cava {
+        color: @main-fg;
+        background-color: @main-bg;
+        margin-left: 8px;
+        margin-right: 0px;
+}
+
+#custom-media {
+        color: @main-fg;
+        background-color: @media;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        margin-left: 8px;
+        margin-right: 0px;
+        padding-right: 8px;
+        padding-left: 10px;
+}
+
+#backlight.icon {
+        color: @blank-fg;
+        background: @blank-bg;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        margin-left: 8px;
+        margin-right: 0px;
+        padding-top: 1px;
+        padding-bottom: 0px;
+        padding-left: 8px;
+        padding-right: 8px;
+}
+
+#backlight.icon.min {
+        color: @max;
+        background: @min;
+}
+
+#backlight.icon.midl {
+        color: @midh;
+        background: @midl;
+}
+
+#backlight.icon.mid {
+        color: @min;
+        background: @mid;
+}
+
+#backlight.icon.midh {
+        color: @min;
+        background: @midh;
+}
+
+#backlight.icon.max {
+        color: @min;
+        background: @max;
+}
+
+#backlight {
+        color: @main-fg;
+        background: @backlight;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        /*margin-right: 10px;*/
+        margin-right: 0px;
+        padding-left: 6px;
+        padding-right: 6px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+}
+
+#clock {
+        color: @module-fg;
+        background: @main-bg;
+        /*background: @main-bg;*/
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-left: 6px;
+        padding-right: 6px;
+}
+
+#pulseaudio.icon {
+        color: @blank-fg;
+        background: @blank-bg;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 8px;
+        padding-right: 8px;
+}
+
+#pulseaudio.icon.min {
+        color: @max;
+        background: @min;
+}
+
+#pulseaudio.icon.midl {
+        color: @midh;
+        background: @midl;
+}
+
+#pulseaudio.icon.mid {
+        color: @min;
+        background: @mid;
+}
+
+#pulseaudio.icon.midh {
+        color: @min;
+        background: @midh;
+}
+
+#pulseaudio.icon.max {
+        color: @min;
+        background: @max;
+}
+
+#pulseaudio {
+        color: @main-fg;
+        background: @pulseaudio;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        margin-right: 0px;
+        padding-left: 6px;
+        padding-right: 6px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+}
+
+#custom-wifi {
+        color: @blank-fg;
+        background: @norm;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        margin-right: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 7px;
+        padding-right: 11px;
+}
+
+#network {
+        color: @main-fg;
+        background: @wifi;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        margin-right: 10px;
+        padding-left: 6px;
+        padding-right: 6px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+}
+
+#cpu.icon {
+        color: @blank-fg;
+        background: @norm;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        margin-right: 0px;
+        padding-left: 6px;
+        padding-right: 12px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+}
+
+#cpu.icon.norm {
+        color: @blank-fg;
+        background: @norm;
+}
+
+#cpu.icon.warning {
+        color: @blank-fg;
+        background: @warning;
+}
+
+#cpu.icon.critical {
+        color: @blank-fg;
+        background: @critical;
+}
+
+#cpu {
+        color: @main-fg;
+        background: @cpu;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        margin-right: 10px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+}
+
+#cpu.norm {
+        color: @norm;
+        background: @cpu;
+}
+
+#cpu.warning {
+        color: @warning;
+        background: @cpu;
+}
+
+#cpu.critical {
+        color: @critical;
+        background: @cpu;
+}
+
+#custom-cpuinfo.icon {
+        color: @blank-fg;
+        background: @norm;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        margin-right: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 10px;
+        padding-right: 8px;
+}
+
+#custom-cpuinfo {
+        color: @main-fg;
+        background: @cpu;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        margin-right: 10px;
+        padding-left: 6px;
+        padding-right: 6px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+}
+
+#custom-gpuinfo.icon {
+        color: @blank-fg;
+        background: @norm;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        margin-right: 0px;
+        padding-left: 6px;
+        padding-right: 11px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+}
+
+#custom-gpuinfo {
+        color: @main-fg;
+        background: @cpu;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        margin-right: 10px;
+        padding-left: 6px;
+        padding-right: 6px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+}
+#memory.icon {
+        color: @blank-fg;
+        background: @norm;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        margin-right: 0px;
+        /*padding-left: 6px;*/
+        /*padding-right: 11px;*/
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 8px;
+        padding-right: 10px;
+}
+
+#memory.icon.norm {
+        color: @blank-fg;
+        background: @norm;
+}
+
+#memory.icon.warning {
+        color: @blank-fg;
+        background: @warning;
+}
+
+#memory.icon.critical {
+        color: @blank-fg;
+        background: @critical;
+}
+
+#memory {
+        color: @main-fg;
+        background: @memory;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        margin-right: 10px;
+        padding-left: 6px;
+        padding-right: 6px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+}
+
+#memory.norm {
+        color: @norm;
+        background: @memory;
+}
+
+#memory.warning {
+        color: @warning;
+        background: @memory;
+}
+
+#memory.critical {
+        color: @critical;
+        background: @memory;
+}
+
+#battery.icon {
+        color: @blank-fg;
+        background: @norm;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        margin-right: 0px;
+        padding-left: 9px;
+        padding-right: 8px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+}
+
+#battery.icon.full {
+        color: @blank-fg;
+        background: @full;
+}
+
+#battery.icon.good {
+        color: @blank-fg;
+        background: @good;
+}
+
+#battery.icon.warning {
+        color: @blank-fg;
+        background: @warning;
+}
+
+#battery.icon.critical {
+        color: @blank-fg;
+        background: @critical;
+}
+
+#battery.icon.charging {
+        color: @blank-fg;
+        background: @charging;
+}
+
+#battery {
+        color: @main-fg;
+        background: @battery;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        margin-right: 8px;
+        padding-left: 8px;
+        padding-right: 5px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+}
+
+#battery.full {
+        color: @full;
+        background: @media;
+}
+
+#battery.good {
+        color: @good;
+        background: @media;
+}
+
+#battery.warning {
+        color: @warning;
+        background: @media;
+}
+
+#battery.critical {
+        color: @critical;
+        background: @media;
+}
+
+#battery.charging {
+        color: @charging;
+        background: @media;
+}

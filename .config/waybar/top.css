@@ -1,0 +1,294 @@
+/* Global Styling */
+* {
+        font-family: "Monocraft Nerd Font";
+        font-weight: normal;
+        font-size: 14px;
+        min-height: 10px;
+}
+
+@import "theme.css";
+
+window#waybar {
+        background: @main-bg;
+        /* background: rgba(255,255,255,0.5); */
+}
+
+#custom-updates {
+        color: @module-fg;
+        background: @module;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-left: 5px;
+        margin-right: 2px;
+        padding-left: 2px;
+        padding-right: 0px;
+}
+
+#workspaces button.empty {
+        color: @main-fg;
+        background-color: @media;
+        border-radius: 0px;
+        margin-top: -2px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding: 0px;
+        padding-top: 3px;
+        padding-bottom: 0px;
+        padding-left: 6px;
+        padding-right: 6px;
+        /*animation: ws_normal 20s ease-in-out 1;*/
+        animation: none;
+}
+
+#workspaces button {
+        color: @main-fg;
+        background-color: @media;
+        border-radius: 0px;
+        margin-top: -2px;
+        margin-bottom: -0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding: 0px;
+        padding-top: 3px;
+        padding-bottom: 0px;
+        padding-left: 6px;
+        padding-right: 6px;
+        /*animation: ws_normal 20s ease-in-out 1;*/
+        animation: none;
+}
+
+#workspaces button.active {
+        color: @module-fg;
+        background: @media;
+        animation: ws_active 20s ease-in-out 1;
+        transition: all 0.2s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+#workspaces button:hover {
+        color: @module-fg;
+        background: @blank-bg;
+        /*animation: ws_hover 20s ease-in-out 1;*/
+        /*transition: all 0.2s cubic-bezier(0.55, -0.68, 0.48, 1.682);*/
+        animation: none;
+        transition: none;
+}
+
+#language {
+        color: @blank-bg;
+        background: @module-fg;
+        margin-right: 0px;
+        padding-left: 6px;
+        padding-right: 2px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+
+}
+
+#submap {
+        margin-left: 8px;
+        margin-right: 8px;
+}
+
+#cava {
+        color: #ffffff;
+        background-color: @media;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-right: 8px;
+}
+
+#custom-media {
+        color: @main-fg;
+        background-color: @media;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-right: 8px;
+        padding-left: 10px;
+}
+
+#backlight.icon {
+        color: @module-fg;
+        background: @blank-bg;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 8px;
+        padding-right: 4px;
+}
+
+#backlight {
+        color: @main-fg;
+        background: @media;
+        /*margin-right: 10px;*/
+        margin-right: 0px;
+        padding-left: 6px;
+        padding-right: 6px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+}
+
+#clock {
+        color: @blank-bg;
+        background: @module-fg;
+        margin-right: 0px;
+        padding-left: 6px;
+        padding-right: 6px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+}
+
+#pulseaudio.icon {
+        color: @module-fg;
+        background: @blank-bg;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 8px;
+        padding-right: 4px;
+}
+
+#pulseaudio {
+        color: @main-fg;
+        background: @pulseaudio;
+        margin-right: 0px;
+        padding-left: 6px;
+        padding-right: 6px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+}
+
+#custom-label {
+        color: @blank-bg;
+        background: @module-fg;
+        margin-right: 0px;
+        padding-left: 6px;
+        padding-right: 2px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+}
+
+#custom-wifi {
+        color: @module-fg;
+        background: @blank-bg;
+        margin-right: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 7px;
+        padding-right: 6px;
+}
+
+#network {
+        color: @main-fg;
+        background: @wifi;
+        margin-right: 0px;
+        padding-left: 6px;
+        padding-right: 6px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+}
+
+#cpu.icon {
+        color: @module-fg;
+        background: @blank-bg;
+        margin-right: 0px;
+        padding-left: 8px;
+        padding-right: 6px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+}
+
+#cpu {
+        color: @main-fg;
+        background: @cpu;
+        margin-right: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+}
+
+#custom-cpuinfo.icon {
+        color: @module-fg;
+        background: @blank-bg;
+        margin-right: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 10px;
+        padding-right: 4px;
+}
+
+#custom-cpuinfo {
+        color: @main-fg;
+        background: @cpu;
+        margin-right: 0px;
+        padding-left: 6px;
+        padding-right: 6px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+}
+
+#custom-gpuinfo.icon {
+        color: @module-fg;
+        background: @blank-bg;
+        margin-right: 0px;
+        padding-left: 6px;
+        padding-right: 6px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+}
+
+#custom-gpuinfo {
+        color: @main-fg;
+        background: @cpu;
+        margin-right: 0px;
+        padding-left: 6px;
+        padding-right: 6px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+}
+#memory.icon {
+        color: @module-fg;
+        background: @blank-bg;
+        margin-right: 0px;
+        /*padding-left: 6px;*/
+        /*padding-right: 11px;*/
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 8px;
+        padding-right: 6px;
+}
+
+#memory {
+        color: @main-fg;
+        background: @memory;
+        margin-right: 0px;
+        padding-left: 6px;
+        padding-right: 6px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+}
+
+#battery.icon {
+        color: @blank-fg;
+        background: @norm;
+        margin-right: 0px;
+        padding-left: 10px;
+        padding-right: 9px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+}
+
+#battery {
+        color: @main-fg;
+        background: @battery;
+        margin-right: 0px;
+        padding-left: 8px;
+        padding-right: 5px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+}
