@@ -1,0 +1,12 @@
+alias zsh='nvim ~/.zshrc'
+alias hyprland='nvim .config/hypr/hyprland.conf'
+alias anime='ani-cli'
+alias    yayfind='yay -Slq | fzf --multi --preview "$aurhelper -Si {1}" | xargs -ro $aurhelper -S'
+4() {blueman-manager}
+alias update='yay -Syu'
+alias now='shutdown now'
+alias matrix='neo'
+alias  push='git add --all && git commit --allow-empty-message -m "" && git push'
+alias  cpush='config add --all && config commit --allow-empty-message -m "" && config push'
+alias bird='nvim ~/games/flappy_bird/main.lua'
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
