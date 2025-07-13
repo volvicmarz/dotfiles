@@ -1,0 +1,85 @@
+/*
+bg - background
+fg - foreground
+br - border
+*/
+
+/* Main Colors */
+@define-color main-bg               rgba(0,0,0,0);
+@define-color main-fg               #E8D4B9;
+@define-color main-br               #6af715;
+
+@define-color active-fg             #9399b2;
+@define-color active-bg             #1e1e2e;
+
+@define-color hover-bg              #45475a;
+@define-color hover-fg              #11111b;
+
+/* Module Colors */
+@define-color module-fg             #8b0000;
+/* @define-color module-bg             #313244; */
+@define-color module-bg             #330E0E;
+@define-color workspaces            #717341;
+
+@define-color media                 #330E0E;
+@define-color window                #330E0E;
+/* @define-color cpuinfo               #330E0E; */
+@define-color memory                #330E0E;
+@define-color clock                 #330E0E; /* nese neto */
+@define-color cpu                   #330E0E;
+@define-color time                  #330E0E;
+@define-color date                  #330E0E;
+@define-color wifi                  #330E0E;
+@define-color blank-fg              #11111b;
+@define-color blank-bg              #330E0E;
+
+@define-color wlg-fg                #cdd6f4;
+@define-color wlg-act               #313244;
+@define-color wlg-hvr               #313244;
+@define-color wlg-bg                #181825;
+
+@define-color pulseaudio            #330E0E;
+@define-color backlight             #330E0E;
+@define-color battery               #330E0E;
+@define-color power                 #330E0E;
+
+/* State Colors */
+@define-color full                  #a6e3a1;
+@define-color good                  #a6e3a1;
+@define-color norm                  #feee74;
+@define-color warning               #f2cdcd;
+@define-color critical              #f38ba8;
+@define-color charging              #a6e3a1;
+
+@define-color min                   #313244;
+@define-color midl                  #585b70;
+@define-color mid                   #7f849c;
+@define-color midh                  #a6adc8;
+@define-color max                   #cdd6f4;
+
+@define-color rosewater             #f5e0dc;
+@define-color flamingo              #f2cdcd;
+@define-color pink                  #f5c2e7;
+@define-color mauve                 #cba6f7;
+@define-color red                   #f38ba8;
+@define-color maroon                #eba0ac;
+@define-color peach                 #fab387;
+@define-color yellow                #f9e2af;
+@define-color green                 #a6e3a1;
+@define-color teal                  #94e2d5;
+@define-color sky                   #89dceb;
+@define-color sapphire              #74c7ec;
+@define-color blue                  #89b4fa;
+@define-color lavender              #b4befe;
+@define-color text                  #cdd6f4;
+@define-color subtext1              #bac2de;
+@define-color subtext0              #a6adc8;
+@define-color overlay2              #9399b2;
+@define-color overlay1              #7f849c;
+@define-color overlay0              #6c7086;
+@define-color surface2              #585b70;
+@define-color surface1              #45475a;
+@define-color surface0              #313244;
+@define-color base                  #1e1e2e;
+@define-color mantle                #181825;
+@define-color crust                 #11111b;
