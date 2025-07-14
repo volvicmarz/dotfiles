@@ -1,12 +1,12 @@
 /* Global Styling */
 * {
-        font-family: "Monocraft Nerd Font";
+        font-family: "SpecialElite-Regular";
         font-weight: normal;
         font-size: 14px;
         min-height: 10px;
 }
 
-@import "theme-disco.css";
+@import "theme.css";
 
 window#waybar {
         background: @main-bg;
@@ -75,7 +75,7 @@ window#waybar {
 }
 
 #language {
-        color: @module-fg;
+        color: @main-fg;
         background: @module-bg;
         margin-right: 0px;
         padding-left: 6px;
@@ -293,7 +293,7 @@ window#waybar {
         padding-bottom: 0px;
 }
 #custom-clock-toggle {
-                color: @main-fg;
+        color: @main-fg;
         background: @module-bg;
         margin-right: 0px;
         padding-left: 6px;

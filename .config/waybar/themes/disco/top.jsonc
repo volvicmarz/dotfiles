@@ -2,6 +2,7 @@
         {
                 "mod": "dock",
                 "layer": "top",
+                "style": "theme.css",
                 "position": "top",
                 "margin-top": 10,
                 "margin-bottom": -8,
@@ -91,8 +92,8 @@
                 },
                 "hyprland/language": {
                         "format": "{}",
-                        "format-en": "US",
-                        "format-ru": "RU",
+                        "format-en": "Capitalism",
+                        "format-ru": "Communism",
                         "on-click": "$HOME/.config/waybar/scripts/keyboardswitch.sh"
                 },
                 "cava": {
@@ -392,8 +393,8 @@
                 "custom/separators": {
                         "format": " "
                 },
-                "custom/label": {
-                        "format": "Stand:"
-                }
+                // "custom/label": {
+                //         "format": "Stand:"
+                // }
         }
 ]
