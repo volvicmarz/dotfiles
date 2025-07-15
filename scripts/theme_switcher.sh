@@ -29,6 +29,7 @@ ln -sf "$WAYBAR_THEME/theme.css" "$WAYBAR/theme.css"
 ln -sf "$WAYBAR_THEME/top.css" "$WAYBAR/top.css"
 ln -sf "$HYPRLAND_THEME/theme.conf" "$HYPRLAND/theme.conf"
 ln -sf "$HYPRLAND_THEME/hyprpaper.conf" "$HYPRLAND/hyprpaper.conf"
+ln -sf "$HYPRLAND_THEME/hyprlock.conf" "$HYPRLAND/hyprlock.conf"
 
 #restarting todos
 
