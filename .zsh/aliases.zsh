@@ -10,3 +10,4 @@ alias  push='git add --all && git commit --allow-empty-message -m "" && git push
 alias  cpush='config add --all && config commit --allow-empty-message -m "" && config push'
 alias bird='nvim ~/games/flappy_bird/main.lua'
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias nvim='nvim $(fzf --preview="bat --color=always {}")'

@@ -48,3 +48,14 @@ source ~/.zsh/aliases.zsh
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
 export PATH=$PATH:$HOME/.spicetify
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+export FZF_COMPLETION_TRIGGER='**'
+_fzf_compgen_path() {
+  fd --hidden --follow --exclude ".git" . "$1"
+}
+_fzf_compgen_dir() {
+  fd --type d --hidden --follow --exclude ".git" . "$1"
+}
+
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --exclude .git '
