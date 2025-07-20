@@ -16,12 +16,22 @@ ColourGreen() {
 	echo -ne $GREEN$1$CLEAR
 }
 
-
+mapfile tasks < todo.txt
 #functions
 add() {
+	while true; do
 	echo -ne $BLUE$"What do you wanna add? "$CLEAR
 	read task
-	echo "${task}" >> todo.txt 
+
+	if [[ -n "$task" ]]; then
+		tasks=("${tasks[@]}" "$task")
+		echo "$task" >> todo.txt
+		break
+	else
+		echo -ne "No input gegeben. Try again "
+	fi
+done
+
 	show
 }
 show() {
