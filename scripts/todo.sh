@@ -32,11 +32,9 @@ add() {
 	fi
 done
 
-	show
 }
 show() {
-	cat -n todo.txt
-	deleting
+	awk 'NR ==1 { print; next } {printf "%d\t%s\n", NR-1,  $0}' todo.txt
 }
 
 deleting() {
@@ -45,13 +43,26 @@ deleting() {
 	$(ColourRed "not yet") 
 	"Waiting for the answer: ""
 	read answer
-	if [[ "$answer" == "yes" || "$answer" == "y" ]]; then
-		echo -ne "Which one?"
-	elif [[ "$answer" == "no" || "$answer" == "n" ]]; then
-		echo -ne "VOOZEFAAAAAAK, Come back later"
-	else
-		echo -ne $RED"Not expected input"$CLEAR
-	fi
+	case $answer in
+		y | yes )
+			echo -ne "Which one? " ;
+			read tasknumber ;
+			line_to_delete="${tasks[$tasknumber]}"
+		if [[ $tasknumber -gt 0 ]] && [[ $tasknumber -le ${#tasks[@]} ]]; then
+				if [[ -n "$line_to_delete" ]]; then
+				sed -i "${tasknumber}d" todo.txt
+				show
+				fi ;
+		else
+			echo -ne "invalid number"
+		fi;;
+
+
+
+		n | no) echo -ne "VOOTZEFAAAAK, Come back later" ;;
+		*) echo -ne $RED"Not expected input"$CLEAR ;;
+	esac
+
 }
 
 
@@ -65,13 +76,11 @@ $(ColourRed "x)") EXIT
 "
 read input
 case $input in
-	1) add ; exit 0 ;;
-	2) show ; exit 0 ;;
+	1) add ; show; deleting; exit 0 ;;
+	2) show ; deleting; exit 0 ;;
 	x) exit 0 ;;
 	*) echo -ne $RED"Input is wrong. Try again."$CLEAR ; exit 0 ;; 
 esac
 }
 
 menu
-
-
