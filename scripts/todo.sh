@@ -34,7 +34,12 @@ done
 
 }
 show() {
-	awk 'NR ==1 { print; next } {printf "%d\t%s\n", NR-1,  $0}' todo.txt
+	if [[ -f "todo.txt" ]]; then
+		awk 'NR ==1 { print; next } {printf "%d\t%s\n", NR-1,  $0}' todo.txt
+	else
+		echo -ne "No text file found"
+		touch todo.txt	
+	fi
 }
 
 deleting() {
