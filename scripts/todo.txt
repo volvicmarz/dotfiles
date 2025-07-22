@@ -1,1 +1,12 @@
-THINGS THAT I HAVE TO DO:
+Things I have to do:
+nvim
+keine
+hilfe
+[Dienstag22] This task was added: hilfe
+hilfe
+[Dienstag 07 22] This task was added: hilfe
+hilfe
+[Dienstag Juli 22] This task was added: hilfe
+ay
+ay
+[Dienstag Juli 22] This task was added: ay
