@@ -89,7 +89,7 @@ case $input in
 esac
 }
 
-menu
+# menu
  
 #todo with getopts
 
@@ -104,8 +104,12 @@ while getopts ":a:r:sd:hv" opt; do
 			#verbose
 			if [[ $verbose==true ]]; then
 				date=$(date "+%A %B %d")
-				echo "[$date] This task was added: ${new_task}" | tee -a todo.txt
+				echo -ne "How many days are left till deadline? "
+				read deadline
+				deadline_date=$(date -d "today +${deadline} day" "+%A %B %d")
+				echo "$(ColourBlue ["$date"]) This task was added: ${new_task}. Deadline is till $(ColourRed ["${deadline_date}"])" | tee -a todo.txt
 			fi
+
 			;;
 		r)
 			to_delete=$((OPTARG +1))
